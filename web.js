@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-var string = "Hello from web.js";
+
 fs.readFile('index.html', 'utf8', function(err, data) {
     if (err) { return console.log(err); }
 
