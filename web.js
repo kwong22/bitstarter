@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 
-fs.readFile('bitstarter-hw4.html', 'utf8', function(err, data) {
+fs.readFile('index.html', 'utf8', function(err, data) {
     if (err) { return console.log(err); }
 
     app.get('/', function(request, response) {
