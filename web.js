@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
 
-fs.readFile('index.html', 'utf8', function(err, data) {
+fs.readFile('bitstarter-hw4.html', 'utf8', function(err, data) {
     if (err) { return console.log(err); }
 
     app.get('/', function(request, response) {
@@ -11,7 +11,7 @@ fs.readFile('index.html', 'utf8', function(err, data) {
 
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
